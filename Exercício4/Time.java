@@ -11,8 +11,21 @@ package time;
  */
 public class Time {
     
-    int hour;
-    int minute;
+    private int hour;
+    private int minute;
+    
+    public int getHour(){
+        return hour;
+    }
+    public void setHour(int h){
+        hour = h;
+    }
+    public int getMinute(){
+        return minute;
+    }
+    public void setMinute(int m){
+        minute = m;
+    }
     
     Time() {};
 
@@ -22,9 +35,9 @@ public class Time {
     public static void main(String[] args) {
         // TODO code application logic here
         Time t = new Time();
-        t.hour = 3;
-        t.minute = 25;
-        System.out.println("The time now is " + t.hour + ":" + t.minute);
+        t.setHour(3);
+        t.setMinute(25);
+        System.out.println("The time now is " + t.getHour() + ":" + t.getMinute());
     }
     
 }
