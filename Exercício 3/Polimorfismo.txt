@@ -1,0 +1,21 @@
+O polimorfismo é caracterizado quando duas ou mais classes distintas tem métodos de mesmo nome, de forma que uma função pode utilizar um objeto de qualquer uma das classes polimórficas, sem necessidade de tratar de forma diferenciada conforme a classe do objeto. 
+Assim, a manutenção do código fica mais fácil, pois em alguns casos mudanças podem ser feitas em todo o programa mudando somente a classe ancestral. Além disso, fica mais fácil adicionar novas classes e funções no programa sem grandes alterações no resto do código. Vejamos um exemplo:
+
+public abstract class OperacaoMatematica {
+    public abstract double calcular(double x, double y);
+}
+
+Essa classe permite que implementenmos diversas operações matemáticas, como adição, subtração, multiplicação e divisão.
+
+public class Soma extends OperacaoMatematica {
+    public double calcular(double x, double y) {
+        return x + y;
+    }
+}
+
+Aqui implementamos a soma.
+Perceba que para implementarmos a subtração, basta adicionarmos mais uma classe.
+
+public static void mostrarCalculo(Subtracao subtracao, double x, double y) {
+        System.out.println("O resultado é: " + subtracao.calcular(x, y));
+    } 
